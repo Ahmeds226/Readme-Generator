@@ -7,15 +7,71 @@ const generateMarkdown = require("./generateMarkdown");
 // Questions:
 
 const questions = () => {
-    return inquirier.prompt([
+  return inquirier.prompt([
+    {
+      type: "input",
+      name: "applicationTitle",
+      message: "Please enter the title of your application.",
+    },
+    {
+      type: "input",
+      name: "installationInstructions",
+      message:
+        "Please enter the any insstructons or pre-requisites for your application.",
+    },
+    {
+      type: "input",
+      name: "applicationDescription",
+      message: "Please provide a description of your application.",
+    },
+    {
+      type: "list",
+      name: "applicationLicensed",
+      message: "Does your application require any of the following licenses?",
+      choices: [
         {
-            type: "input",
-            name: "applicationTitle",
-            message: "Please enter the title of your application",
-        }
-    ])
-  },
-;
+          name: "No License",
+          value: "None",
+        },
+        {
+          name: "Apache 2.0",
+          value:
+            "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+        },
+        {
+          name: "GNU GPL v3",
+          value:
+            "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
+        },
+        {
+          name: "Eclipse 1.0",
+          value:
+            "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)",
+        },
+        {
+          name: "Mozilla",
+          value:
+            "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)",
+        },
+        {
+          name: "MIT",
+          value:
+            "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+        },
+        {
+          type: "input",
+          name: "developerEmail",
+          message: "Please enter the developer email address.",
+        },
+        {
+          type: "input",
+          name: "devloperGithub",
+          message: "Please enter your Github user name.",
+        },
+      ],
+    },
+  ]);
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
