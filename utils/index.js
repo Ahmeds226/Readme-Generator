@@ -4,7 +4,18 @@ const fs = require("fs");
 const path = require("path");
 const generateMarkdown = require("./generateMarkdown");
 // TODO: Create an array of questions for user input
-const questions = [];
+// Questions:
+
+const questions = () => {
+    return inquirier.prompt([
+        {
+            type: "input",
+            name: "applicationTitle",
+            message: "Please enter the title of your application",
+        }
+    ])
+  },
+;
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
