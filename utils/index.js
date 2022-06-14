@@ -15,14 +15,20 @@ const questions = () => {
     },
     {
       type: "input",
+      name: "applicationDescription",
+      message: "Please provide a description of your application.",
+    },
+    {
+      type: "input",
       name: "installationInstructions",
       message:
         "Please enter the any insstructons or pre-requisites for your application.",
     },
     {
       type: "input",
-      name: "applicationDescription",
-      message: "Please provide a description of your application.",
+      name: "licenses",
+      message: "What licenses have you used within your project?",
+      choices: ["APACHE", "GNU", "ISC", "MIT", "No license"],
     },
     {
       type: "input",
