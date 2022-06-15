@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const inquirier = require("inquirer");
+const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 const generateMarkdown = require("./generateMarkdown");
@@ -7,7 +7,7 @@ const generateMarkdown = require("./generateMarkdown");
 // Questions:
 
 const questions = () => {
-  return inquirier.prompt([
+  return inquirer.prompt([
     {
       type: "input",
       name: "applicationTitle",
