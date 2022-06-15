@@ -32,7 +32,7 @@ const questions = () => {
     {
       type: "input",
       name: "applicationContributions",
-      message: "Please enter the number of contributions that have been made",
+      message: "Please enter how many people contributed.",
       choices: ["0-5", "6-10", "11-15", "16-20", "21+"],
     },
     {
