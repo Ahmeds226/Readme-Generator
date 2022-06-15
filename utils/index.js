@@ -31,13 +31,13 @@ const questions = () => {
     },
     {
       type: "input",
-      name: "applicationUsage",
+      name: "applicationContributions",
       message: "Please enter the number of contributions that have been made",
       choices: ["0-5", "6-10", "11-15", "16-20", "21+"],
     },
     {
       type: "input",
-      name: "licenses",
+      name: "license",
       message: "What licenses have you used within your project?",
       choices: ["APACHE", "GNU", "ISC", "MIT", "No license"],
     },
