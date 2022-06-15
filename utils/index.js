@@ -26,9 +26,25 @@ const questions = () => {
     },
     {
       type: "input",
+      name: "applicationUsage",
+      message: "Please enter the required usage informaton.",
+    },
+    {
+      type: "input",
+      name: "applicationUsage",
+      message: "Please enter the number of contributions that have been made",
+      choices: ["0-5", "6-10", "11-15", "16-20", "21+"],
+    },
+    {
+      type: "input",
       name: "licenses",
       message: "What licenses have you used within your project?",
       choices: ["APACHE", "GNU", "ISC", "MIT", "No license"],
+    },
+    {
+      type: "input",
+      name: "applicationTests",
+      message: "Please enter the type of tests required.",
     },
     {
       type: "input",
