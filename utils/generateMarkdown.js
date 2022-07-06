@@ -20,53 +20,48 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `
   ## Title
-  ${data.applicationTitle}
+  ${data.title}
 
 ${renderLicenseBadge(data.license)}
 
   ## Description
-${data.applicationDescription}
+${data.description}
 
  ## Table of Contents
 
-* [Installation](#installationInstructions)
+* [Installation](#installation)
 
-* [Usage](#applicationUsage)
-
-* [Contributions](#applicationContributions)
+* [Usage](#usage)
 
 * [License](#license)
 
-* [Tests](#applicationTests)
+* [Contributing](#contributing)
 
-* [Email](#developerEmail)
-
-* [Github Username](#devloperGithub)
+* [Tests](#tests)
 
  ## Installation
- <a name ="installationInstructions"> </a>
-${data.installationInstructions}
+ <a name ="installation"> </a>
+${data.installation}
 
 ## Usage
-<a name ="applicationUsage"> </a>
-${data.applicationUsage}
-
-## Contributing
-<a name ="applicationContributions"> </a>
-${data.applicationContributions}
+<a name ="usage"> </a>
+${data.usage}
 
 ## Licence
 <a name ="license"> </a>
 ${renderLicenseBadge(data.license)}
 
+## Contributing
+<a name ="contributing"> </a>
+${data.contributing}
 
 ## Tests
-<a name ="applicationTests"> </a>
-${data.applicationTests}
+<a name ="tests"> </a>
+${data.tests}
 
 ## Questions
- If you have any further questions, contact me on ${data.developerEmail}.
- My github is ${data.devloperGithub}.
+ If you have any further questions, contact me on ${data.email}.
+ My github is ${data.github}.
 `;
 }
 
